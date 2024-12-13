@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carusel</title>
+    <link rel="stylesheet" href="carusel.component.scss">
+</head>
+<body>
+
+<header class="header">
+  <h1>Carusel</h1>
+</header>
+
+<br>
+<button class="click-2" style="position: absolute;" routerLink="">
+  <i class="pi pi-home" style="position: center;"></i>
+</button>
+
+<br><br><br><br><br>
+
+
+
+
+<p-carousel  
+    [value]="products" 
+    [numVisible]="3" 
+    [numScroll]="3" 
+    [circular]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    autoplayInterval="3000">
+    <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 p-3">
+            <div class="mb-3">
+                <div class="relative mx-auto">
+                    <img 
+                        src="https://ibertronica.es/blog/wp-content/uploads/2024/03/ella-don-DdiwOzeqkDU-unsplash-2048x1363.jpg" 
+                        alt="Imagen de Producto" 
+                        class="w-full border-round" />
+                    <p-tag 
+                        [value]="product.inventoryStatus" 
+                        [severity]="getSeverity(product.inventoryStatus)" 
+                        class="absolute" 
+                        [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+                </div>
+            </div>
+            <div class="mb-3 font-medium">
+                {{ product.name }}
+            </div>
+            <div class="flex justify-content-between align-items-center">
+                <div class="mt-0 font-semibold text-xl">
+                    {{ '$' + product.price }}
+                </div>
+                <span>
+                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+                    <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+                </span>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
+
+
+
+<div class="flex justify-content-center align-items-center" style="gap: 20px;">
+    <button class="click" routerLink="">
+      <i class="pi pi-angle-double-left"></i> Atrás
+    </button>
+    <button class="click" routerLink="/galeria">
+      Siguiente <i class="pi pi-angle-double-right"></i>
+    </button>
+  </div>
+  
+</body>
+</html>
