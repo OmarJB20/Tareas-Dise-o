@@ -1,7 +1,6 @@
-<header class="header">
-  <h1>Galería de Imágenes</h1>
-  <link rel="stylesheet" href="galeria.component.scss">
-</header>
+<p-menubar [model]="items"></p-menubar>
+<link rel="stylesheet" href="galeria.component.scss">
+
 <br>
 <button class="click-2" style="position: absolute; right: 20px;" routerLink="">
   <i class="pi pi-home"></i>
@@ -13,26 +12,36 @@
 
 <!-- Componente Galleria de PrimeNG -->
 <div class="grid p-2 justify-content-center gap-3 flex-wrap">
-<p-galleria 
-    [value]="images" 
-    [responsiveOptions]="responsiveOptions" 
-    [numVisible]="5" 
-    [containerStyle]="{ 'max-width': '640px' }" 
-    [numVisible]="5">
-    <ng-template pTemplate="item" let-item>
-        <img [src]="item.itemImageSrc" style="width: 100%;" />
-    </ng-template>
+  <p-galleria 
+      [value]="images" 
+      [responsiveOptions]="responsiveOptions" 
+      [numVisible]="5" 
+      [containerStyle]="{ 'max-width': '640px' }" 
+      [numVisible]="5">
+      <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" style="width: 100%;" />
+      </ng-template>
 
-  <ng-template pTemplate="thumbnail" let-item>
-    <div class="grid grid-nogutter justify-content-center">
-      <img [src]="item.thumbnailImageSrc" [alt]="item.alt" style="width: 80px; height: 80px; object-fit: cover; border-radius: 20%; border: 2px solid #ccc;" />
-    </div>
-  </ng-template>
-</p-galleria>
+      <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+              <img [src]="item.thumbnailImageSrc" [alt]="item.alt" style="width: 80px; height: 80px; object-fit: cover; border-radius: 20%; border: 2px solid #ccc;" />
+          </div>
+      </ng-template>
+  </p-galleria>
+</div>
+
+<br>
+
+<!-- Componente de imagen con vista previa -->
+<div class="flex justify-content-center">
+  <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" 
+           alt="Image" 
+           width="250" 
+           [preview]="true">
+  </p-image>
 </div>
 
 <br><br>
-
 
 <!-- Botones de navegación -->
 <div class="flex justify-content-center align-items-center" style="gap: 20px;">
@@ -43,4 +52,3 @@
     Siguiente <i class="pi pi-angle-double-right"></i>
   </button>
 </div>
-

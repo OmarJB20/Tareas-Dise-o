@@ -6,18 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./galeria.component.scss']
 })
 export class GaleriaComponent implements OnInit {
+  items = [
+    {
+      label: 'Inicio',
+      icon: 'pi pi-home',
+      routerLink: '/'
+    },
+    {
+      label: 'Matrices',
+      icon: 'pi pi-table',
+      routerLink: '/entregable'
+    },
+    {
+      label: 'Cuadros',
+      icon: 'pi pi-stop',
+      routerLink: '/entregable-1'
+    },
+    {
+      label: 'Cards',
+      icon: 'pi pi-th-large',
+      routerLink: '/entregable-2'
+    },
+    {
+      label: 'Iconos',
+      icon: 'pi pi-face-smile',
+      routerLink: '/iconos'
+    },
+    {
+      label: 'Carrusel',
+      icon: 'pi pi-images',
+      routerLink: '/carusel'
+    },
+    {
+      label: 'Galeria',
+      icon: 'pi pi-image',
+      routerLink: '/galeria'
+    }
+  ];
+
+
   images: any[] = [];  
   responsiveOptions: any[];
 
   constructor() {
     this.images = [
-      {
-        
-        itemImageSrc: 'https://www.greenforestecolodge.com/archivos/blogs/sunset_1.jpg',
-        thumbnailImageSrc: 'https://www.greenforestecolodge.com/archivos/blogs/sunset_1.jpg',
-        alt: 'Imagen 1',
-        title: 'Imagen 1',
-      },
       {
         itemImageSrc: 'https://st.depositphotos.com/2045405/2015/i/600/depositphotos_20157387-stock-photo-summer-landscape-beauty-sunset-over.jpg',
         thumbnailImageSrc: 'https://st.depositphotos.com/2045405/2015/i/600/depositphotos_20157387-stock-photo-summer-landscape-beauty-sunset-over.jpg',

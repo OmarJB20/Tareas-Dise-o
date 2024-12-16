@@ -7,6 +7,7 @@ import { PrimeIcons, MenuItem } from 'primeng/api';
   styleUrls: ['./botones.component.scss']
 })
 export class BotonesComponent implements OnInit {
+  
 
     loading: boolean = false; 
     load() {
@@ -66,15 +67,43 @@ export class BotonesComponent implements OnInit {
 
   constructor() {
     this.items = [
-      {
-        label: 'Nuevo',
-        icon: PrimeIcons.PLUS
-      },
-      {
-        label: 'Eliminar',
-        icon: PrimeIcons.TRASH
-      }
-    ];
+        {
+          label: 'Inicio',
+          icon: 'pi pi-home',
+          routerLink: '/'
+        },
+        {
+          label: 'Matrices',
+          icon: 'pi pi-table',
+          routerLink: '/entregable'
+        },
+        {
+          label: 'Cuadros',
+          icon: 'pi pi-stop',
+          routerLink: '/entregable-1'
+        },
+        {
+          label: 'Cards',
+          icon: 'pi pi-th-large',
+          routerLink: '/entregable-2'
+        },
+        {
+          label: 'Iconos',
+          icon: 'pi pi-face-smile',
+          routerLink: '/iconos'
+        },
+        {
+          label: 'Carrusel',
+          icon: 'pi pi-images',
+          routerLink: '/carusel'
+        },
+        {
+          label: 'Galeria',
+          icon: 'pi pi-image',
+          routerLink: '/galeria'
+        }
+      ];
+    
   }
 
   ngOnInit() {

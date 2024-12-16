@@ -15,6 +15,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { GalleriaModule } from 'primeng/galleria';
 import { GaleriaComponent } from './galeria/galeria.component';
+import { MenubarModule } from 'primeng/menubar';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { GaleriaComponent } from './galeria/galeria.component';
     ButtonModule,
     CarouselModule,
     TagModule,
-    GalleriaModule 
+    GalleriaModule,
+    MenubarModule,
+    ImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

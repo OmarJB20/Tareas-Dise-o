@@ -1,10 +1,31 @@
-.header {
-    background-color: #444477;
-    color: white;
-    padding: 5px;
-    text-align: center;
-}
-
+/* Estilo base */
+.responsive-menubar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+  
+  /* Ocultar menú en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .responsive-menubar {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* Mostrar el menú al activar el botón */
+  .show-menu .responsive-menubar {
+    display: block;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
 .box {
     background-color: #c73b22;
     color: white;
