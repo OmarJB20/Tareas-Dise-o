@@ -17,6 +17,7 @@ import { GalleriaModule } from 'primeng/galleria';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { MenubarModule } from 'primeng/menubar';
 import { ImageModule } from 'primeng/image';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ImageModule } from 'primeng/image';
     TagModule,
     GalleriaModule,
     MenubarModule,
-    ImageModule
+    ImageModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
